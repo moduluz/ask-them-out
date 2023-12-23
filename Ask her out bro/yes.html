@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./yes_style.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1 class="header_text">Ofc!!!</h1>
+            <h2 class="header_text">I already knew that</h2>
+        </div>
+        <div class="gif_container">
+            <img id="gifImage" src="https://media.giphy.com/media/MHivGfRPohbizi9GUE/giphy.gif" alt="Funny GIF">
+
+        </div>
+        <div class="buttons">
+            <button class="btn" id="yesButton" onclick="changePicture()">Yes</button>
+            <button class="btn" id="noButton" onclick="moveButton()">No</button>
+            <script>
+                function changePicture() {
+                    // Get the image element
+                    var imageElement = document.getElementById('gifImage');
+
+                    // Array of alternative image URLs
+                   
+                    // Get a random index from the array
+                    var randomIndex = Math.floor(Math.random() * alternativeImages.length);
+
+                    // Set the source of the image to the randomly selected URL
+                    imageElement.src = alternativeImages[randomIndex];
+                }
+
+                function moveButton() {
+                    var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+                    var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+                    document.getElementById('noButton').style.left = x + 'px';
+                    document.getElementById('noButton').style.top = y + 'px';
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>

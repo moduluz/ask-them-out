@@ -1,0 +1,35 @@
+body {
+    /* Set background image */
+    background-image: url('C:\\html\\Web\\light-pink-heart-pattern\\67663.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.gif_container {
+    position: relative;
+}
+
+#gifImage {
+    max-width: 100%;
+    height: auto;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    margin-right: 10px;
+}
