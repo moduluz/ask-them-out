@@ -1,10 +1,9 @@
 body {
-    /* Set background image */
-    background-image: url('https://img.freepik.com/free-vector/light-pink-heart-pattern_53876-67663.jpg?w=740&t=st=1703289687~exp=1703290287~hmac=2497b9a6b7214dc9d1bede33d22947257e58548834199492c5f964070532d810');
+    /* Set background image and gradient overlay */
+    background: url('https://img.freepik.com/free-vector/light-pink-heart-pattern_53876-67663.jpg?w=740&t=st=1703289687~exp=1703290287~hmac=2497b9a6b7214dc9d1bede33d22947257e58548834199492c5f964070532d810'), linear-gradient(rgba(255, 182, 193, 0.6), rgba(255, 105, 180, 0.6));
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     margin: 0;
     overflow: hidden;
 }
