@@ -1,9 +1,14 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./yes_style.css">
-    <a href="https://www.ask-her-out-bro.com">Visit My Website</a>
-
+    <style>
+        /* Add this style for the transition effect */
+        .floating {
+            transition: all 0.5s ease;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -15,7 +20,8 @@
         </div>
         <div class="buttons">
             <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
-            <button class="btn" id="noButton" onclick="moveButton()">No</button>
+            <!-- Add the 'floating' class to the 'No' button -->
+            <button class="btn floating" id="noButton" onmouseover="startFloating()" onmouseout="stopFloating()">No</button>
             <script>
                 function nextPage() {
                     window.location.href = "yes.html";
@@ -26,6 +32,16 @@
                     var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
                     document.getElementById('noButton').style.left = x + 'px';
                     document.getElementById('noButton').style.top = y + 'px';
+                }
+
+                function startFloating() {
+                    // Add the 'floating' class when hovering starts
+                    document.getElementById('noButton').classList.add('floating');
+                }
+
+                function stopFloating() {
+                    // Remove the 'floating' class when hovering stops
+                    document.getElementById('noButton').classList.remove('floating');
                 }
             </script>
         </div>
