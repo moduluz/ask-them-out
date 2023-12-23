@@ -1,0 +1,70 @@
+body {
+    /* Set background image and gradient overlay */
+    background: url('https://img.freepik.com/free-vector/light-pink-heart-pattern_53876-67663.jpg?w=740&t=st=1703289687~exp=1703290287~hmac=2497b9a6b7214dc9d1bede33d22947257e58548834199492c5f964070532d810'), linear-gradient(rgba(255, 182, 193, 0.6), rgba(255, 105, 180, 0.6));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.gif_container {
+    position: relative;
+}
+
+#gifImage {
+    max-width: 100%;
+    height: auto;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff69b4; /* Hot Pink */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #d23c74; /* Lighter shade of Hot Pink on hover */
+}
+
+/* Move the "No" button to a random position with animation */
+@keyframes moveNoButton {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(20px, -20px);
+    }
+    50% {
+        transform: translate(-20px, 20px);
+    }
+    75% {
+        transform: translate(20px, 20px);
+    }
+    100% {
+        transform: translate(-20px, -20px);
+    }
+}
+
+/* Apply the animation only when the "No" button is clicked */
+#noButton:active {
+    animation: moveNoButton 0.5s ease-in-out;
+}
